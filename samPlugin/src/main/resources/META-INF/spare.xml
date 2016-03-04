@@ -1,0 +1,29 @@
+<Import type="png" path="img/arrow-down.png"/>
+<Import type="png" path="img/logo.png"/>
+<Import type="png" path="img/logo_quantel_red.png"/>
+<Import type="png" path="img/logo_quantel_red2.png"/>
+<Import type="png" path="img/logo_quantel_red_large.png"/>
+<Import type="png" path="img/newlogo.png"/>
+
+<Import type="png" path="textures/black_paper.png"/>
+<Import type="png" path="textures/blackorchid.png"/>
+<Import type="png" path="textures/dark_leather.png"/>
+<Import type="png" path="textures/dark_wash_wall.png"/>
+<Import type="png" path="textures/debut_dark.png"/>
+<Import type="png" path="textures/debut_light.png"/>
+<Import type="png" path="textures/stressed_linen.png"/>
+
+<Import type="png" path="fonts/edit.png"/>
+<Import type="png" path="fonts/glyphicons-halflings.png"/>
+<Import type="eot" path="fonts/glyphicons-halflings-regular.eot"/>
+<Import type="svg" path="fonts/glyphicons-halflings-regular.svg"/>
+<Import type="ttf" path="fonts/glyphicons-halflings-regular.ttf"/>
+<Import type="woff" path="fonts/glyphicons-halflings-regular.woff"/>
+<Import type="png" path="fonts/glyphicons-halflings-white.png"/>
+<Import type="html" path="fonts/icons-reference.html"/>
+<Import type="eot" path="fonts/qtube-browser-v1.eot"/>
+<Import type="svg" path="fonts/qtube-browser-v1.svg"/>
+<Import type="ttf" path="fonts/qtube-browser-v1.ttf"/>
+<Import type="woff" path="fonts/qtube-browser-v1.woff"/>
+<Import type="png" path="fonts/sort_asc.png"/>
+<Import type="png" path="fonts/sort_desc.png"/>
