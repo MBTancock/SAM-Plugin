@@ -2,8 +2,8 @@ AV.ViewManager.addViewFactory('samPane', function() {
     return new AV.View({
         onInit: function() {
             // Add the iframe
+            //this.dom().html('<iframe width="100%" height="100%" src="file:///D:/Shared_Folder/SAM%20Player%20Test/index.html" frameborder="0"></iframe>');
 
-//            this.dom().html('<iframe width="100%" height="100%" id="myFrame" src;
             this.dom().append("<link rel=\"stylesheet\" href=\"fonts/lato/fonts.css\">");
             this.dom().append("<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">");
             this.dom().append("<link rel=\"stylesheet\" href=\"css/vendor/bootstrap-editable.css\">");
@@ -20,13 +20,6 @@ AV.ViewManager.addViewFactory('samPane', function() {
             this.dom().append("<div id=\"base\"></div>");
             this.dom().append("<div id=\"afp\"><button id=\"playClip\">Play something</button></div>");
             this.dom().append("<script data-main=\"app-avid\" src=\"vendor/require.js\"></script>");
-
-/*
-            var script = document.createElement( 'script' );
-            script.data-main = 'app-avid';
-            script.src = 'vendor/require.js';
-            this.dom().append( script );
-*/
         }
 
 
