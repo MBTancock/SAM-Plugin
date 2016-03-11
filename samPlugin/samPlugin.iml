@@ -115,5 +115,25 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="org.st-js.bridge:requirejs:2.1.20.bv1" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../build/ipc-dist/lib/com.avid.central.framework.RestCore.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../build/ipc-dist/lib/javax.ws.rs.jsr311-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="org.apache.axis:axis:1.4" level="project" />
+    <orderEntry type="library" exported="" name="org.apache.axis:axis-jaxrpc:1.4" level="project" />
   </component>
 </module>

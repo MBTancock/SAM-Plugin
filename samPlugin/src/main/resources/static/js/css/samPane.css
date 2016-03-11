@@ -1,0 +1,33 @@
+/*
+ * Copyright Broadcast Media Solutions
+ */
+
+.samPane-settings .x4-panel-body-default .x4-panel-body-default {
+    border: none;
+    padding-top: 0;
+}
+
+.samPane-settings .settings-fieldset .x4-form-item-label{
+    width: 200px;
+    margin: 6px 3px 0 0 !important;
+    padding: 0;
+    font: bold 11px Arial;
+}
+
+.samPane-settings .x4-fieldset{
+    padding: 5px 10px 8px 10px;
+    margin-left: 1px;
+}
+
+.samPane-settings .x4-form-item.x4-form-type-text {
+    margin-bottom: 2px;
+}
+
+.samPane-settings .x-panel-body > .x4-panel > .x4-panel-body {
+    border-radius: 0;
+    border: 0;
+}
+
+.samPane-settings legend.x4-fieldset-header {
+    margin-left: 10px;
+}

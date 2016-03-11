@@ -6,85 +6,10 @@
 
     <Import type="js" path="js/samPane.js"/>
 
-    <Import type="js" path="js/app.js"/>
-    <Import type="js" path="js/app-avid.js"/>
-    <Import type="js" path="js/datatables-plugin.js"/>
-    <Import type="js" path="js/helper.js"/>
-    <Import type="js" path="js/main.js"/>
-    <Import type="js" path="js/main-avid.js"/>
-
-    <Import type="js" path="js/controllers/clipboard.js"/>
-    <Import type="js" path="js/controllers/genq.js"/>
-    <Import type="js" path="js/controllers/imgCache.js"/>
-    <Import type="js" path="js/controllers/imgloader.js"/>
-    <Import type="js" path="js/controllers/keyboard.js"/>
-    <Import type="js" path="js/controllers/navigation.js"/>
-    <Import type="js" path="js/controllers/storage.js"/>
-
-    <Import type="js" path="js/models/area.js"/>
-    <Import type="js" path="js/models/bin.js"/>
-    <Import type="js" path="js/models/binmanager.js"/>
-    <Import type="js" path="js/models/clip.js"/>
-    <Import type="js" path="js/models/container.js"/>
-    <Import type="js" path="js/models/segment.js"/>
-    <Import type="js" path="js/models/transfer.js"/>
-    <Import type="js" path="js/models/transfermanager.js"/>
-    <Import type="js" path="js/models/transformer.js"/>
-    <Import type="js" path="js/models/zone.js"/>
-
-    <Import type="js" path="js/vendor/bootstrap.min.js"/>
-    <Import type="js" path="js/vendor/bootstrap-editable.min.js"/>
-    <Import type="js" path="js/vendor/CSInterface.js"/>
-    <Import type="js" path="js/vendor/dataTables.colReorder.min.js"/>
-    <Import type="js" path="js/vendor/jquery.dataTables.rowReordering.js"/>
-    <Import type="js" path="js/vendor/jquery.dataTables-1.10.5.min.js"/>
-    <Import type="js" path="js/vendor/jquery.fullscreen.min.js"/>
-    <Import type="js" path="js/vendor/jquery-1.11.1.min.js"/>
-    <Import type="js" path="js/vendor/jquery-ui.min.js"/>
-    <Import type="js" path="js/vendor/media-source-portability.js"/>
-    <Import type="js" path="js/vendor/require.js"/>
-    <Import type="js" path="js/vendor/segmentindex.js"/>
-
-    <Import type="js" path="js/views/bin.js"/>
-    <Import type="js" path="js/views/bin-table.js"/>
-    <Import type="js" path="js/views/container.js"/>
-    <Import type="js" path="js/views/footer.js"/>
-    <Import type="js" path="js/views/metadata.js"/>
-    <Import type="js" path="js/views/modals.js"/>
-    <Import type="js" path="js/views/navbar.js"/>
-    <Import type="js" path="js/views/notification.js"/>
-    <Import type="js" path="js/views/player.js"/>
-    <Import type="js" path="js/views/playercontrols.js"/>
-    <Import type="js" path="js/views/timeline.js"/>
-    <Import type="js" path="js/views/transfermanager.js"/>
-    <Import type="js" path="js/views/transformer.js"/>
-    <Import type="js" path="js/views/transformer-table.js"/>
-    <Import type="js" path="js/views/widgets.js"/>
-
-    <Import type="js" path="js/views/players/HTML5Player.js"/>
-    <Import type="js" path="js/views/players/MSEPlayer.js"/>
-    <Import type="js" path="js/views/players/SilverlightPlayer.js"/>
-    <Import type="js" path="js/views/players/StillsPlayer.js"/>
-
     <Import type="css" path="css/samPane.css"/>
 
-    <Import type="css" path="js/css/bootstrap.min.css"/>
-    <Import type="css" path="js/css/desktop.css"/>
-    <Import type="css" path="js/css/qtube.css"/>
-    <Import type="css" path="js/css/qtubejw.css"/>
-    <Import type="css" path="js/css/styles.css"/>
-
-    <Import type="css" path="js/css/vendor/bootstrap-editable.css"/>
-    <Import type="css" path="js/css/vendor/dataTables.colReorder.min.css"/>
-    <Import type="css" path="js/css/vendor/offcanvas.css"/>
-    <Import type="css" path="js/css/vendor/speechBubble.css"/>
-
-    <Import type="css" path="js/css/adobe/adobe.css"/>
-
-    <Import type="css" path="fonts/lato/fonts.css"/>
-
-    <Property name="productId" value="SAM Plugin"/>
+    <Property name="productId" value="samPane"/>
     <Property name="view-env" value="production"/>
-    <Property name="example" value="true"/>
+    <!--<Property name="example" value="true"/>-->
   </View>
 </UIPlugin>

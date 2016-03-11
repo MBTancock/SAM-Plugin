@@ -1,10 +1,13 @@
 AV.ViewManager.addViewFactory('samPane', function() {
     return new AV.View({
         onInit: function() {
-            // Add the iframe
-            //this.dom().html('<iframe width="100%" height="100%" src="file:///D:/Shared_Folder/SAM%20Player%20Test/index.html" frameborder="0"></iframe>');
-
-            this.dom().append("<link rel=\"stylesheet\" href=\"fonts/lato/fonts.css\">");
+            this.bindGlobal("open", function (event, data) {
+                playClip(data);
+            });
+                // Add the iframe
+            this.dom().html('<iframe width="100%" height="100%" src="http://localhost:61864/player.aspx" frameborder="0"></iframe>');
+             /*
+             this.dom().append("<link rel=\"stylesheet\" href=\"fonts/lato/fonts.css\">");
             this.dom().append("<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">");
             this.dom().append("<link rel=\"stylesheet\" href=\"css/vendor/bootstrap-editable.css\">");
             this.dom().append("<link rel=\"stylesheet\" href=\"css/vendor/speechBubble.css\">");
@@ -20,44 +23,14 @@ AV.ViewManager.addViewFactory('samPane', function() {
             this.dom().append("<div id=\"base\"></div>");
             this.dom().append("<div id=\"afp\"><button id=\"playClip\">Play something</button></div>");
             this.dom().append("<script data-main=\"app-avid\" src=\"vendor/require.js\"></script>");
+            */
+
         }
-
-
     })
 
-    function load_home(){
-    var data = "<!doctype html>" +
-        "<html lang=\"en\">" +
-            "<head>" +
-            "<meta charset=\"utf-8\">" +
-            "<meta name=\"viewport\" content=\"width=device-width\">" +
-            "<title>HTML5 Player Framework</title>" +
-            "</head>" +
-            "<body>" +
-            "<h1>HTML5 Player Framework</h1>" +
-        "<h2>Examples</h2>" +
-        "<ul>" +
-        "<li><a href=\"html/declarative.html\">Declarative Usage</a></li>" +
-        "<li><a href=\"html/javascript.html\">JavaScript Usage</a></li>" +
-        "<li><a href=\"html/fallback.html\">Fallback Usage</a></li>" +
-        "<li><a href=\"html/advancedfallbacks.html\">Advanced Fallbacks</a></li>" +
-        "<li><a href=\"html/playlist.html\">Playlist</a></li>" +
-            "<li><a href=\"html/mediarssplaylist.html\">Media RSS Playlist</a></li>" +
-        "<li><a href=\"html/captions.html\">Closed Captions</a></li>" +
-        "<li><a href=\"html/cues.html\">Timeline and Chapter Cues</a></li>" +
-        "<li><a href=\"html/autoplay.html\">Autoplay</a></li>" +
-            "<li><a href=\"html/accessibility.html\">Accessibility</a></li>" +
-            "<li><a href=\"html/localization.html\">Localization</a></li>" +
-            "</ul>" +
-            "<h2>Resources</h2>" +
-            "<ul>" +
-            "<li><a href=\"http://playerframework.codeplex.com/releases/view/86402\" target=\"_blank\">HTML5 Player Framework 1.1 (CodePlex)</a></li>" +
-        "<li><a href=\"http://playerframework.codeplex.com/wikipage?title=Player%20Framework%20for%20HTML5\" target=\"_blank\">HTML5 Player Framework Documentation (CodePlex)</a></li>" +
-        "<li><a href=\"http://playerframework.codeplex.com/\" target=\"_blank\">Player Framework (CodePlex)</a></li>" +
-        "<li><a href=\"http://www.microsoft.com/en-us/mediaplatform/\" target=\"_blank\">Microsoft Media Platform</a></li>" +
-        "</ul>" +
-        "</body>" +
-        "</html>"
-       return data;
+    function playClip (clipData)
+    {
+
     }
+
 });
