@@ -135,6 +135,5 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="org.apache.axis:axis:1.4" level="project" />
     <orderEntry type="library" exported="" name="org.apache.axis:axis-jaxrpc:1.4" level="project" />
-    <orderEntry type="library" exported="" name="org.webjars:requirejs:2.2.0" level="project" />
   </component>
 </module>

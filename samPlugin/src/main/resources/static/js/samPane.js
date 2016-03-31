@@ -5,64 +5,49 @@ AV.ViewManager.addViewFactory('samPane', function() {
                 playClip(data);
             });
 
-            this.dom().append(buildDom());
-
+            rootElement = this.dom();
+            //rootElement.append(buildDom());
                 // Add the iframe
-//            this.dom().html('<iframe width="100%" height="100%" src="http://localhost:61864/player.aspx" frameborder="0"></iframe>');
-
-            //this.dom().append("<div id=\"silverlightControlHost\"></div>");
-            //var myDiv = $('#myDiv');
-            //this.dom().append("<div id=\"testDiv\">Fred was here!</div>");
-
-/*
-             this.dom().append("<link rel=\"stylesheet\" href=\"fonts/lato/fonts.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/vendor/bootstrap-editable.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/vendor/speechBubble.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/vendor/offcanvas.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/vendor/dataTables.colReorder.min.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/qtube.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/qtubejw.css\">");
-            this.dom().append("<link rel=\"stylesheet\" href=\"css/styles.css\">");
-
-            this.dom().append("<div id=\"loggingIn\" class=\"loader player-loader hide\"></div>");
-            //this.dom().append("<div id=\"base\"><noscript>Please enable javascript in you browser settings to continue</noscript></div>");
-            this.dom().append("<div id=\"base\"></div>");
-            this.dom().append("<div id=\"afp\"><button id=\"playClip\">Play something</button></div>");
-            this.dom().append("<script src=\"vendor/bootstrap.min.js\"></script>");
-            this.dom().append("<script src=\"vendor/jquery-1.11.1.min.js\"></script>");
-            this.dom().append("<script src=\"vendor/jquery-ui.min.js\"></script>");
-            this.dom().append("<script src=\"vendor/jquery.dataTables-1.10.5.min.js\"></script>");
-            this.dom().append("<script src=\"vendor/dataTables.colReorder.min.js\"></script>");
-            this.dom().append("<script src=\"vendor/jquery.fullscreen.min.js\"></script>");
-            this.dom().append("<script src=\"vendor/bootstrap-editable.min.js\"></script>");
-            this.dom().append("<script src=\"vendor/media-source-portability.js\"></script>");
-*/
-
-
+            //this.dom().html('<iframe width="100%" height="100%" src="https://192.168.0.122/" frameborder="0"></iframe>');
         }
     })
 
-    function buildDom()
+    var rootElement;
+
+    function buildDom(id)
     {
-        var msg = "<div id=\"silverlightControlHost\">";
-        msg += "<object data=\"data:application/x-silverlight-2,\" type=\"application/x-silverlight-2\" width=\"100%\" height=\"100%\">";
-        msg += "<param name=\"source\" value=\"js/SmoothStreamingPlayer.js\"/>";
+        var msg = "<style type=\"text/css\">html, body {height: 100%;overflow: auto;} body {padding: 0;margin: 0;}\#silverlightControlHost {height: 100%;text-align:center}</style>";
+        //msg += "<form id=\"form1\" runat=\"server\" style=\"height:100%\">";
+        msg += "<div id=\"silverlightControlHost\">";
+        msg += "<object id=\"player\" data=\"data:application/x-silverlight-2,\" type=\"application/x-silverlight-2\" width=\"100%\" height=\"100%\">";
+        msg += "<param name=\"source\" value=\"/com.broadcastmediasolutions.samPlugin/0.0.1.EVALUATE/js/SmoothStreamingPlayer.js\"/>";
         msg += "<param name=\"onError\" value=\"onSilverlightError\" />";
-        msg += "<param name=\"background\" value=\"white\" />";
-        msg += "<param name=\"minRuntimeVersion\" value=\"4.0.50401.0\" />";
+        msg += "<param name=\"background\" value=\"black\" />";
+        msg += "<param name=\"minRuntimeVersion\" value=\"5.0.61118.0\" />";
         msg += "<param name=\"autoUpgrade\" value=\"true\" />";
-        msg += "<param name=\"InitParams\" value=\"mediaurl=http://195.12.20.58:8090/quantel/homezone/clips/streams/229045/stream.xml\" />";
+        msg += "<param name=\"InitParams\" value=\"mediaurl=http://195.12.20.58:8090/quantel/homezone/clips/streams/";
+        msg += id;
+        msg += "/stream.xml\" />";
         msg += "<a href=\"http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50401.0\" style=\"text-decoration:none\">";
         msg += "<img src=\"http://go.microsoft.com/fwlink/?LinkId=161376\" alt=\"Get Microsoft Silverlight\" style=\"border-style:none\"/>";
         msg += "</a>";
         msg += "</object>";
+        msg += "</div>"
+        //msg += "</form>"
         return msg;
     }
+
+
     function playClip (clipData)
     {
+        if (clipData.commonObject.base.systemType != "samClipBrowser")
+        {
+            return;
+        }
 
-    }
+        rootElement.children().remove();
+        rootElement.append(buildDom(clipData.commonObject.base.id));
+     }
 
     function onSilverlightError(sender, args) {
         var appSource = "";

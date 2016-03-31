@@ -1,12 +1,11 @@
 Manifest-Version: 1.0
 Service-Component: OSGI-INF/*.xml
-Private-Package: com.avid.central.samplugin.datamodel,z.y.x
-Bundle-Version: 0.0.1.v20160311_141029
+Private-Package: z.y.x
+Bundle-Version: 0.0.1.EVALUATE
 Tool: Bnd-2.1.0.20130426-122213
 Bundle-Name: samPlugin
 Bnd-LastModified: 1457704708194
 Created-By: 1.7.0_79 (Oracle Corporation)
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: com.mycompany.samPlugin
-Import-Package: javax.xml.bind.annotation
+Bundle-SymbolicName: com.broadcastmediasolutions.samPlugin
 
